@@ -12,7 +12,7 @@ For a detailed breakdown of our thought process and implementation for each stag
 ## Key Features & Achievements
 
 1.  **Comprehensive Document Handling:** Our robust design has been rigorously tested. It successfully processes all five provided sample PDFs (`file01.pdf` to `file05.pdf`), encompassing diverse document types: forms, technical reports, multi-page reports, presentations, and informal invitations. Crucially, we extended our validation to **additional, self-sourced real-world PDFs (including documents with over 300 pages)**. This proactive and extensive testing confirms our solution's genuine adaptability and robustness beyond just the initial samples.
-2.  **Blazing Fast Performance:** We strictly adhere to the hackathon's core constraint of `$\le10$ seconds` execution time for a 50-page PDF. Our highly optimized Python-based solution consistently processes documents, even those exceeding 300 pages, in **under 1 second**. This remarkable efficiency is a direct result of our lightweight, heuristic approach, which avoids heavy, slow models, and represents a significant bonus point.
+2.  **Blazing Fast Performance:** We strictly adhere to the hackathon's core constraint of `$\le10$ seconds` execution time for a 50-page PDF. Our highly optimized Python-based solution consistently processes documents, even those with over 300 pages, in **under 1 second**. This remarkable efficiency is a direct result of our lightweight, heuristic approach, which avoids heavy, slow models, and represents a significant bonus point.
 3.  **Operational Robustness & Compliance:** The code operates entirely offline (no network/internet calls are made during execution) and is designed exclusively for CPU execution (AMD64 architecture). It strictly meets all stipulated environmental and model size constraints (model size $\le 200MB$ if used), ensuring seamless deployment on the evaluation platform.
 4.  **Smart Page Count Detector:** As a user-centric feature, our solution intelligently checks the PDF's total page count before initiating processing. It then provides an informative message about the expected processing time, indicating whether the document falls within or exceeds the 50-page performance target. This adds a layer of transparency and user-friendliness to the system.
 5.  **Reliable Output Generation:** Our system consistently generates accurate JSON output files for each processed PDF. It correctly produces an empty array (`[]`) for documents with no detectable headings, ensuring predictable and compliant results in all scenarios.
@@ -33,13 +33,13 @@ For a detailed breakdown of our thought process and implementation for each stag
 
 2.  **Clone the Repository:**
     ```bash
-    git clone [YOUR_GIT_REPO_URL_HERE]  # **Important: Replace with your actual Git repository URL.**
+    git clone [https://github.com/Kumariswati2001/AdobeHackathon_Round1A](https://github.com/Kumariswati2001/AdobeHackathon_Round1A)  # **This is the actual Git repository URL**
     cd AdobeHackathon_Round1A
     ```
     *(**Submission Requirement:** Please ensure your Git Repository remains **private** until the official competition deadline. You will be explicitly informed by the organizers when to make it public.)*
 
 3.  **Place Input PDFs:**
-    * All your input PDF files (e.g., Adobe's provided samples and any additional PDFs you wish to test, like `test_long_pdf.pdf`) should be placed within the `sample-data_sets/PDFs/` subdirectory of your project.
+    * Place all your input PDF files (e.g., Adobe's provided samples and any additional PDFs you wish to test, like `test_long_pdf.pdf`) into the `sample-data_sets/PDFs/` subdirectory.
 
 4.  **Build the Docker Image:**
     * Open your terminal or command prompt and navigate to the root directory of your project (`AdobeHackathon_Round1A`).
